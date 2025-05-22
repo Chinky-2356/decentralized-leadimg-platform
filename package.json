@@ -1,27 +1,117 @@
 {
-  "name": "Project-Title",
+  "name": "decentralized-leading-platform",
   "version": "1.0.0",
-  "description": "",
+  "description": "A revolutionary blockchain-based ecosystem that empowers users to create, share, and interact with digital content in a completely decentralized manner",
   "main": "index.js",
-  "scripts": {
-    "test": "npx hardhat test",
-    "compile": "npx hardhat compile",
-    "deploy": "npx hardhat run scripts/deploy.js --network coreTestnet"
+  "keywords": [
+    "blockchain",
+    "solidity",
+    "hardhat",
+    "decentralized",
+    "smart-contracts",
+    "web3",
+    "dapp",
+    "ethereum",
+    "core-blockchain",
+    "defi",
+    "content-platform",
+    "rewards",
+    "nft"
+  ],
+  "author": {
+    "name": "Decentralized Leading Platform Team",
+    "email": "team@decentralizedleadingplatform.com",
+    "url": "https://decentralizedleadingplatform.com"
   },
-  "keywords": [],
-  "author": "",
   "license": "MIT",
+  "homepage": "https://github.com/your-username/decentralized-leading-platform#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/your-username/decentralized-leading-platform.git"
+  },
+  "bugs": {
+    "url": "https://github.com/your-username/decentralized-leading-platform/issues"
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  },
+  "scripts": {
+    "compile": "npx hardhat compile",
+    "test": "npx hardhat test",
+    "test:gas": "REPORT_GAS=true npx hardhat test",
+    "test:coverage": "npx hardhat coverage",
+    "deploy": "npx hardhat run scripts/deploy.js --network core_testnet2",
+    "deploy:mainnet": "npx hardhat run scripts/deploy.js --network core_mainnet",
+    "deploy:local": "npx hardhat run scripts/deploy.js --network localhost",
+    "deploy:sepolia": "npx hardhat run scripts/deploy.js --network sepolia",
+    "node": "npx hardhat node",
+    "console": "npx hardhat console",
+    "verify": "npx hardhat verify --network core_testnet2",
+    "verify:mainnet": "npx hardhat verify --network core_mainnet",
+    "clean": "npx hardhat clean",
+    "size": "npx hardhat size-contracts",
+    "flatten": "npx hardhat flatten",
+    "accounts": "npx hardhat accounts",
+    "balance": "npx hardhat balance",
+    "check": "npx hardhat check",
+    "lint": "npx solhint 'contracts/**/*.sol'",
+    "lint:fix": "npx solhint 'contracts/**/*.sol' --fix",
+    "format": "npx prettier --write 'contracts/**/*.sol' 'test/**/*.js' 'scripts/**/*.js'",
+    "format:check": "npx prettier --check 'contracts/**/*.sol' 'test/**/*.js' 'scripts/**/*.js'",
+    "docs": "npx hardhat docgen",
+    "export": "npx hardhat export-abi",
+    "prepare": "npm run compile",
+    "pretest": "npm run compile",
+    "predeploy": "npm run compile",
+    "postinstall": "npm run compile"
+  },
   "devDependencies": {
-    "@nomicfoundation/hardhat-toolbox": "^2.0.2",
-    "@nomiclabs/hardhat-ethers": "^2.0.0",
-    "@nomiclabs/hardhat-waffle": "^2.0.0",
-    "chai": "^4.3.7",
-    "dotenv": "^16.0.3",
-    "ethereum-waffle": "^3.0.0",
-    "ethers": "^5.0.0",
-    "hardhat": "^2.14.0"
+    "@nomicfoundation/hardhat-chai-matchers": "^2.0.0",
+    "@nomicfoundation/hardhat-ethers": "^3.0.0",
+    "@nomicfoundation/hardhat-network-helpers": "^1.0.0",
+    "@nomicfoundation/hardhat-toolbox": "^4.0.0",
+    "@nomicfoundation/hardhat-verify": "^2.0.0",
+    "@typechain/ethers-v6": "^0.5.0",
+    "@typechain/hardhat": "^9.0.0",
+    "@types/chai": "^4.2.0",
+    "@types/mocha": ">=9.1.0",
+    "@types/node": ">=16.0.0",
+    "chai": "^4.2.0",
+    "ethers": "^6.4.0",
+    "hardhat": "^2.19.0",
+    "hardhat-abi-exporter": "^2.10.1",
+    "hardhat-contract-sizer": "^2.10.0",
+    "hardhat-docgen": "^1.3.0",
+    "hardhat-gas-reporter": "^1.0.8",
+    "prettier": "^3.0.0",
+    "prettier-plugin-solidity": "^1.1.3",
+    "solhint": "^4.0.0",
+    "solidity-coverage": "^0.8.1",
+    "ts-node": ">=8.0.0",
+    "typechain": "^8.3.0",
+    "typescript": ">=4.5.0"
   },
   "dependencies": {
-    "@openzeppelin/contracts": "^4.8.3"
+    "@openzeppelin/contracts": "^4.9.0",
+    "dotenv": "^16.3.1"
+  },
+  "peerDependencies": {
+    "ethers": "^6.0.0"
+  },
+  "resolutions": {
+    "ethers": "^6.4.0"
+  },
+  "config": {
+    "solidity": {
+      "version": "0.8.19"
+    },
+    "networks": {
+      "default": "core_testnet2"
+    }
+  },
+  "funding": {
+    "type": "opencollective",
+    "url": "https://opencollective.com/decentralized-leading-platform"
   }
-} 
+}
